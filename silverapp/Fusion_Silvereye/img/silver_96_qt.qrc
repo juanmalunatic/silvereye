@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/logo">
+        <file>silver_96_qt.png</file>
+    </qresource>
+</RCC>

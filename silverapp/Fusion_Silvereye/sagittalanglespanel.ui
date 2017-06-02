@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SagittalAnglesPanel</class>
+ <widget class="QWidget" name="SagittalAnglesPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>599</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#SagittalAnglesPanel{
+	background-color:rgb(255,255,255);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="1">
+    <widget class="QCustomPlot" name="rightAnklePlot" native="true"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QCustomPlot" name="leftHipPlot" native="true"/>
+   </item>
+   <item row="0" column="1">
+    <widget class="QCustomPlot" name="rightHipPlot" native="true"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QCustomPlot" name="leftAnklePlot" native="true"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QCustomPlot" name="rightKneePlot" native="true"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QCustomPlot" name="leftKneePlot" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

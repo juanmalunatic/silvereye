@@ -1,0 +1,5 @@
+Eigen       3.2.algo
+   Añadida carpeta unsupported para hacer uso de EulerAngles module 
+	(la carpeta unsupported es de la 3.3)
+
+QCustomPlot 2.0.0-beta
