@@ -18,7 +18,7 @@ CONFIG += c++11
 
 QMAKE_CXXFLAGS += /O2 #MSVC2013
 
-TARGET = Fusion_Silvereye
+TARGET = Silverapp
 TEMPLATE = app
 
 
