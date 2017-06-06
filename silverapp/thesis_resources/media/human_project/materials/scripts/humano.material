@@ -1,0 +1,169 @@
+material humano_0_base
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 0.301961 0.278431 0.278431 1
+            diffuse 1.000000 0.950000 0.850000 1.000000
+            specular 0.027451 0.027451 0.027451 64.000000
+            emissive 0.196078 0.101961 0.101961
+
+            depth_write on
+			scene_blend alpha_blend //jm
+
+            texture_unit diffuseTexture
+            {
+                texture textures/young_lightskinned_male_diffuse3.png
+            }
+
+            //texture_unit litsphereTexture
+            //{
+            //    texture textures/lit_standard_skin.png
+            //}
+
+        }
+    }
+}
+
+material humano_1_short02
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 0.110000 0.110000 0.110000 1
+            diffuse 1.000000 1.000000 1.000000 1.000000
+            specular 0.050980 0.050980 0.050980 122.880000
+            emissive 0.000000 0.000000 0.000000
+
+            depth_write off
+            alpha_rejection greater 20//128
+			scene_blend alpha_blend //jm
+
+            texture_unit diffuseTexture
+            {
+                texture textures/short02_diffuse.png
+            }
+
+            //texture_unit litsphereTexture
+            //{
+            //    texture textures/lit_refl_sharp_aniso_hard_blonde.png
+            //}
+
+        }
+    }
+}
+
+material humano_2_low_poly
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 0.110000 0.110000 0.110000 1
+            diffuse 1.000000 1.000000 1.000000 1.000000
+            specular 1.000000 1.000000 1.000000 128.000000
+            emissive 0.000000 0.000000 0.000000
+
+            depth_write off
+			scene_blend alpha_blend //jm
+            alpha_rejection greater 128
+
+            texture_unit diffuseTexture
+            {
+                texture textures/brown_eye.png
+            }
+
+            //texture_unit litsphereTexture
+            //{
+            //    texture textures/skinmat_eye.png
+            //}
+
+        }
+    }
+}
+
+material humano_3_eyebrow001
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 1.000000 1.000000 1.000000 1
+            diffuse 1.000000 1.000000 1.000000 1.000000
+            specular 0.000000 0.000000 0.000000 64.000000
+            emissive 0.000000 0.000000 0.000000
+
+			scene_blend alpha_blend //jm
+            depth_write off 
+			alpha_rejection greater 20 //jm
+			
+            //alpha_rejection greater 128
+
+            texture_unit diffuseTexture
+            {
+                texture textures/eyebrow001.png
+            }
+
+        }
+    }
+}
+
+material humano_4_male_casualsuit06
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 1.000000 1.000000 1.000000 1
+            diffuse 1.000000 1.000000 1.000000 1.000000
+            specular 0.027451 0.027451 0.027451 25.100800
+            emissive 0.000000 0.000000 0.000000
+
+            depth_write on
+			scene_blend alpha_blend //jm
+
+            texture_unit diffuseTexture
+            {
+                texture textures/male_casualsuit06_diffuse.png
+            }
+
+            //texture_unit normalMapTexture
+            //{
+            //    texture textures/male_casualsuit06_normal.png
+            //}
+
+            //texture_unit aoMapTexture
+            //{
+            //    texture textures/male_casualsuit06_ao.png
+            //}
+
+            //texture_unit litsphereTexture
+            //{
+            //    texture textures/lit_matte.png
+            //}
+
+        }
+    }
+}

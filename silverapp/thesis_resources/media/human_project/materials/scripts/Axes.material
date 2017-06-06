@@ -1,0 +1,121 @@
+
+material _missing_material_
+{
+    receive_shadows off
+    technique
+    {
+        pass
+        {
+            ambient 0.1 0.1 0.1 1.0
+            diffuse 0.8 0.0 0.0 1.0
+            specular 0.5 0.5 0.5 1.0 12.5
+            emissive 0.3 0.3 0.3 1.0
+        }
+    }
+}
+
+// MaterialRed genrated by blender2ogre 0.5.8
+
+material MaterialRed 
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass MaterialRed
+        {
+            ambient 0.800000011920929 0.009793710894882679 0.0 1.0
+            diffuse 0.6400000190734865 0.007834968832656275 0.0 1.0
+            specular 0.5 0.5 0.5 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+
+            alpha_to_coverage off
+            colour_write on
+            cull_hardware clockwise
+            depth_check on
+            depth_func less_equal
+            depth_write on
+            illumination_stage 
+            light_clip_planes off
+            light_scissor off
+            lighting on
+            normalise_normals off
+            polygon_mode solid
+            scene_blend one zero
+            scene_blend_op add
+            shading gouraud
+            transparent_sorting on
+
+        }
+    }
+}
+// MaterialGreen genrated by blender2ogre 0.5.8
+
+material MaterialGreen 
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass MaterialGreen
+        {
+            ambient 0.033505916595458984 0.51732337474823 0.0 1.0
+            diffuse 0.02680473367578884 0.4138587059655592 0.0 1.0
+            specular 0.5 0.5 0.5 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+
+            alpha_to_coverage off
+            colour_write on
+            cull_hardware clockwise
+            depth_check on
+            depth_func less_equal
+            depth_write on
+            illumination_stage 
+            light_clip_planes off
+            light_scissor off
+            lighting on
+            normalise_normals off
+            polygon_mode solid
+            scene_blend one zero
+            scene_blend_op add
+            shading gouraud
+            transparent_sorting on
+
+        }
+    }
+}
+// MaterialBlue genrated by blender2ogre 0.5.8
+
+material MaterialBlue 
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass MaterialBlue
+        {
+            ambient 0.0 0.06242670118808746 0.43853431940078735 1.0
+            diffuse 0.0 0.04994136169465424 0.35082746074836635 1.0
+            specular 0.5 0.5 0.5 1.0 12.5
+            emissive 0.0 0.0 0.0 1.0
+
+            alpha_to_coverage off
+            colour_write on
+            cull_hardware clockwise
+            depth_check on
+            depth_func less_equal
+            depth_write on
+            illumination_stage 
+            light_clip_planes off
+            light_scissor off
+            lighting on
+            normalise_normals off
+            polygon_mode solid
+            scene_blend one zero
+            scene_blend_op add
+            shading gouraud
+            transparent_sorting on
+
+        }
+    }
+}

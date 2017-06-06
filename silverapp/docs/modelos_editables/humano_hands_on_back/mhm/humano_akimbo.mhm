@@ -1,0 +1,34 @@
+# Written by MakeHuman 1.1.0
+version v1.1.0
+tags humano_akimbo
+camera 17.5 2.5 -1.0 0.801495498929 1.0 0.7375
+modifier breast/breast-trans-down|up 0.010000
+modifier macrodetails-universal/Muscle 0.500000
+modifier macrodetails/African 0.442153
+modifier macrodetails-proportions/BodyProportions 0.522000
+modifier macrodetails/Gender 0.841000
+modifier head/head-angle-in|out -0.428000
+modifier macrodetails-height/Height 0.538000
+modifier breast/BreastSize 0.104000
+modifier macrodetails/Age 0.478000
+modifier breast/BreastFirmness 0.791000
+modifier macrodetails/Asian 0.189847
+modifier head/head-fat-decr|incr -0.340000
+modifier head/head-age-decr|incr -0.098000
+modifier macrodetails/Caucasian 0.368000
+modifier breast/nipple-size-decr|incr -0.318000
+modifier head/head-rectangular 0.269000
+modifier macrodetails-universal/Weight 0.577000
+modifier breast/breast-volume-vert-down|up -0.670000
+hair short02 c104cd4a-1edc-43f9-8b94-f63345a44638
+skeleton cmu_mb.mhskel
+eyebrows eyebrow001 9c81ec3a-faa5-4c94-9cdb-992300ba3084
+eyes Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa
+pose no_toes_no_pose_normal_best_feet.bvh
+clothes male_casualsuit06 be449715-fd7d-49d1-bca1-7fdd4264bc2d
+clothesHideFaces True
+expression smile01.mhpose
+skinMaterial skins/young_asian_male/young_asian_male.mhmat
+material short02 c104cd4a-1edc-43f9-8b94-f63345a44638 short02.mhmat
+material Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa eyes/materials/brown.mhmat
+subdivide False
