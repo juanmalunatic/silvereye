@@ -45,7 +45,8 @@
 	- Emits a signal on close that destroys the
 	saved connection cleanly.
 
-- TO-DO implement "duplicate last received" strategy to handle missing data packets.
+  - Handles missing sensor reads by duplicating the last correct value received
+  - TO-DO add setting to disable this behaviour
 
 ### Serial settings
 
@@ -72,7 +73,7 @@
 
 - Show 3D human model which updates live from the sensor stream. 
 	Be sure to save references prior to showing the model, or else.
-- TO-DO Fix CPU rendering lag when the system is left running for 2minutes>. 
+- TO-DO Fix CPU rendering lag when the system is left running for 2+ minutes. 
 
 ### Sagittal angles
 

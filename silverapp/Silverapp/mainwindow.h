@@ -105,6 +105,7 @@ private:
 
 	std::array<ImuData,7>            mSensorDataUnsynced = std::array<ImuData,7>();
 	std::array<Eigen::Quaterniond,7> mRawQuatsUnsynced   = std::array<Eigen::Quaterniond,7>();
+	std::array<Eigen::Quaterniond,7> mRawQuatsFallback   = std::array<Eigen::Quaterniond,7>();
 
 	// Quaternion algorithms
 
@@ -130,7 +131,7 @@ private:
 
 	// Setup functions
 
-    void interfaceDecorate();
+	void initializeComplexVariables();
 
 	void serialThreadStart();
 

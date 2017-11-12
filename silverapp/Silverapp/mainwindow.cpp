@@ -56,9 +56,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	/// Main actions
 
-    // Decorate the GUI
+	// Initialize complex variables
 
-    this->interfaceDecorate();
+	this->initializeComplexVariables();
 
 	// Set up a COM port controller on a separate thread and make it emit new data as a signal.
 
@@ -93,7 +93,7 @@ void MainWindow::closeEvent( QCloseEvent *evt )
 {
 	Q_UNUSED( evt );
 	mpHumanModelPanel->close(); // needed to exit
-	qDebug() << "Se daño misteriosamente con el port. Arreglame";
+	qDebug() << "Error en el puerto serial.";
 
 }
 
@@ -148,6 +148,9 @@ void MainWindow::serialThreadStart()
 * Signal sendCurrentSensorData is emitted afer data for 7 sensors
 * has been acquired (which takes around 10 ms at 100 Hz). This signal
 * broadcasts the latest formatted data of the 7 sensors.
+*
+* mSerialRounds is used to ensure a full round of sensor's output
+* was acquired.
 * ---------------------------------------------------------------------*/
 
 void MainWindow::processSerialData(const QByteArray& newSensorData)
@@ -185,14 +188,19 @@ void MainWindow::processSerialData(const QByteArray& newSensorData)
 		formattedData.quaternion.z
 	);
 
-	// Dummy if offline
+	// If the received data was invalid, use the previous correct reading
 	if( ! formattedData.online )
 	{
-		currentQuat = Eigen::Quaterniond(1,0,0,0);
+		currentQuat = mRawQuatsFallback[ iSensor ];
+	}
+	else // Also, if the data was valid, store it in the "fallback" buffer for further use
+	{
+		// Note that the fallback quats are not guaranteed to be from the last round
+		mRawQuatsFallback[ iSensor ] = currentQuat;
 	}
 
-	mRawQuatsUnsynced[ iSensor ] = currentQuat;
 
+	mRawQuatsUnsynced[ iSensor ] = currentQuat;
 
 	if( mSerialRounds != (MainWindow::TOTAL_SENSORS - 1) ) // Update sensorData when all 7 sensors have been read
 	{
@@ -784,10 +792,15 @@ std::array< Eigen::Quaterniond, 7 > MainWindow::getReferenceQuats(){
 
 
 
-void MainWindow::interfaceDecorate()
+void MainWindow::initializeComplexVariables()
 {
+	// Older methods to decorate the App's window
     /*
     QGraphicsScene* scene = new QGraphicsScene();
     QGraphicsView* view  = mUi->logoGraphicsView;
     */
+
+	// Safety net: this variable _might_ be used without having been updated.
+
+	mRawQuatsFallback.fill( Eigen::Quaterniond(1,0,0,0) );
 }
