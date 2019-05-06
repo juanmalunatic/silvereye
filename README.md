@@ -7,7 +7,7 @@ Silvereye is an IMU based motion capture system for the lower limbs, based on Bo
 In order to capture kinematic data, the main segments of the lower limbs (seven in total) are equipped with an inertial module.
 This information is then transmitted wirelessly to a PC, which processes it to perform gait analysis.
 
-See a short demo of the system in action:
+See a short YouTube video of the system in action:
 
 [![Silvereye: IMU motion capture for gait analysis, demo](https://img.youtube.com/vi/81BaRLLR5xU/0.jpg)](https://www.youtube.com/watch?v=81BaRLLR5xU)
 
